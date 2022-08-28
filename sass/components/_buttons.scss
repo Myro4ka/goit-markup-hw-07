@@ -1,3 +1,26 @@
+.main-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: none;
+
+  background-color: $accent-color;
+  color: $primary-white-color;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    cursor: pointer;
+    outline: none;
+  }
+}
+// ----кнопка закриття---
 .close-button {
   position: absolute;
   top: 8px;
@@ -5,24 +28,22 @@
 
   width: 30px;
   height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center);
 
-  background-color: var(--primary-white-color);
+  background-color: $primary-white-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
 }
-.icon-close-btn {
+.close-btn__icon {
   width: 18px;
   height: 18px;
 
   fill: #000000;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* --при фокусі залишено outline за замовчуванням */
-.close-button:hover .icon-close-btn,
-.close-button:focus .icon-close-btn {
-  fill: var(--accent-color);
+
+  .close-button:hover &,
+  .close-button:focus & {
+    fill: $accent-color;
+  }
 }
