@@ -4,13 +4,13 @@
   border-bottom: 1px solid #ececec;
 }
 .header-wrap {
-  @include flex(none);
+  @include flex(start);
 }
 .navigation {
-  @include flex(none);
+  @include flex(start);
 }
 .navigation-list {
-  @include flex(none);
+  @include flex(start);
   margin-left: 93px;
 }
 .navigation-item:not(:last-child) {
@@ -44,14 +44,14 @@
   }
 }
 .header-contacts {
-  @include flex(none);
+  @include flex(start);
   margin-left: auto;
   gap: 30px;
 }
 .header-mail,
 .header-tel {
   padding: 0;
-  @include flex(none);
+  @include flex(start);
 
   color: $second-text-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
